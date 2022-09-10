@@ -1,11 +1,21 @@
 import React from 'react'
 import './footer.style.css'
+import { useDispatch } from 'react-redux';
+import { addChat } from '../state';
 
-export function ChatFooter() {
+export function ChatFooter({id}) {
+  const dispatch = useDispatch();
   const [msg, setmsg] = React.useState('')
 
   const handleSendMsg =() => {
-    console.log(msg, 'msg');
+    const body  ={
+      content: {content:msg,
+                id: 2,
+                sender: 'me'
+              },
+      receiver: id
+    }
+    dispatch(addChat(body))
   }
 
   return (

@@ -8,3 +8,12 @@ export const viewOneConversation = (id) => {
         })
     }
 }
+export const addChat = (body) => {
+
+    return async (dispatch) => {
+        dispatch({
+            type: "ADDCHAT",
+            payload: body
+        })
+    }
+}
