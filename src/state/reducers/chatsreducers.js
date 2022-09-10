@@ -66,13 +66,13 @@ export const chatsReducers = (state = initialState, action) => {
         case "ADDCHAT":
             
         const newchat = state.conversations.filter(item => item.id === action.payload.receiver)[0];
-        newchat.chatsList.push(action.payload.content)
-        console.log(newchat);
-
+        newchat.chatsList.push(action.payload.content);
+        
 
 
         return {
-            ...state
+            ...state,
+            chats:newchat
         }
 
         default:
