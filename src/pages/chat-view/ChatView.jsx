@@ -18,7 +18,7 @@ export function ChatView() {
    dispatch(viewOneConversation(id))
  }, [])
  
-  console.log('--------',chats);
+  console.log('',chats);
 
 
 
@@ -64,12 +64,15 @@ export function ChatView() {
   ])
 
   return (
-    <div className=' w-2/4 bg-slate-100  flex-1 mx-auto flex flex-col'>
-      <ChatNav user ={id} title={"Chats"} />
-      <ChatBody chatList= {chatList} />
+    chats ? 
+    ( <div className=' w-2/4 bg-slate-100  flex-1 mx-auto flex flex-col'>
+      <ChatNav user ={"chats.name"} title={"Chats"} />
+      <ChatBody chatList= {chats.chatsList} />
      <ChatFooter/>
-
-    </div>
+    </div>)
+    :
+    (<div>Loading...</div>)
+    
   )
 }
 

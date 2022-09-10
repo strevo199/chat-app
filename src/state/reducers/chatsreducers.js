@@ -3,7 +3,7 @@ import uuid from "react-uuid";
 const initialState = {
 
     isLoading: false,
-    chats: null,
+    conversation: {},
     conversations: [
         {
             id: "c886ef08223",
@@ -46,7 +46,7 @@ const initialState = {
                 }]
         },
         {
-            id: "c886ef08223ttt",
+            id: "gc886ef08223ttt",
             name: " Solomon Doe",
             chatsList: [
                 {
@@ -137,7 +137,7 @@ export const chatsReducers = (state = initialState, action) => {
         case "VIEWUSERCHAT":
             return {
                 ...state,
-                isLoading: true,
+                isLoading: false,
                 chats: state.conversations.filter(item => item.id === action.payload)[0]
         
             }
