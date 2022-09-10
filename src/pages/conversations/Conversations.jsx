@@ -24,7 +24,7 @@ export function Conversations() {
             conversations.length ?
             (
               conversations.map(conversation => (
-                <Link state={{user: conversation}} to={conversation.id} className='flex m-1 p-1 border-b-2 mb-1 bg-white'  key={conversation.id}>
+                <Link target={"_blank"} state={{user: conversation}} to={conversation.id} className='flex m-1 p-1 border-b-2 mb-1 bg-white'  key={conversation.id}>
                   <div className='mr-4'>
                     <img className=' w-11' src={receiveruser} alt="" />
                   </div>
