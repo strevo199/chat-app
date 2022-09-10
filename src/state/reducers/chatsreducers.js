@@ -67,6 +67,7 @@ export const chatsReducers = (state = initialState, action) => {
             
         const newchat = state.conversations.filter(item => item.id === action.payload.receiver)[0];
         newchat.chatsList.push(action.payload.content);
+        localStorage.setItem("conversations", JSON.stringify(state.conversations))
         return {
             ...state,
             chats:newchat

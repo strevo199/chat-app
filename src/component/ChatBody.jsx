@@ -4,7 +4,7 @@ import './chat/chat.style.css'
 
 export function ChatBody({chatList}) {
   return (
-    <div className=' bg-slate-50 chatbody overflow-y-scroll  py-2 '>
+    <div className=' bg-slate-50 flex flex-col justify-end chatbody overflow-y-scroll  py-2 '>
       {
         chatList.length ?
         (
