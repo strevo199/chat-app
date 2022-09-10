@@ -17,3 +17,16 @@ export const addChat = (body) => {
         })
     }
 }
+
+
+
+
+export const loginUser = (body) => {
+
+    return async (dispatch) => {
+        dispatch({
+            type: "LOGINUSER",
+            payload: body
+        })
+    }
+}

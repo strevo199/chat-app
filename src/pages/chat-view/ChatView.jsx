@@ -22,8 +22,8 @@ export function ChatView() {
 
   return (
     chats ? 
-    ( <div className=' w-2/4 bg-slate-100  flex-1 mx-auto flex flex-col'>
-      <ChatNav user ={chats.name} title={"Chats"} />
+    ( <div className=' w-2/4 bg-slate-50 shadow-inner  flex-1 mx-auto flex flex-col'>
+      <ChatNav receiver ={chats.name} title={"Chats"} />
       <ChatBody chatList= {chats.chatsList} />
      <ChatFooter id = {chats.id} />
     </div>)
