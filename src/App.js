@@ -4,7 +4,8 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import {Provider} from 'react-redux'
 import { store } from './state';
-import { Intro,Conversations } from './pages';
+import { Conversations } from './pages';
+import { Intro } from './pages/intro/Intro';
 
 
 
@@ -12,13 +13,14 @@ function App(props) {
     return (
         <Provider store={store}>
             <div className='app'>
-                <Routes>                
+                <Routes>               
                     <Route path='/' element= {<Intro/>}/>
                     <Route path='/chats' element= {<Conversations/>}/>
                     <Route path='/chats/:id' element= {<ChatView/>}/>
                 </Routes>
             </div>
         </Provider>
+        
     );
 }
 

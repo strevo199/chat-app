@@ -15,7 +15,7 @@ export function ChatFooter({id}) {
               },
       receiver: id
     }
-    dispatch(addChat(body))
+    dispatch(addChat(body)) 
   }
 
   return (
