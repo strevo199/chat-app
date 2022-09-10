@@ -1,5 +1,12 @@
 .chatImg {
-    width: 60px;
+    width: 50px;
     position: absolute;
 }
 
+.chatbody {
+    height: 78vh;
+}
+
+.chatnav {
+    height: 10vh;
+}
