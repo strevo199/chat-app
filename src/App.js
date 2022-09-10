@@ -2,9 +2,9 @@ import React from 'react';
 import { ChatView } from './pages/chat-view';
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
-import { Conversations } from './pages/conversations/Conversations';
 import {Provider} from 'react-redux'
 import { store } from './state';
+import { Intro,Conversations } from './pages';
 
 
 
@@ -13,6 +13,7 @@ function App(props) {
         <Provider store={store}>
             <div className='app'>
                 <Routes>                
+                    <Route path='/' element= {<Intro/>}/>
                     <Route path='/chats' element= {<Conversations/>}/>
                     <Route path='/chats/:id' element= {<ChatView/>}/>
                 </Routes>
