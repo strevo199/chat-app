@@ -1,17 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { ChatBody } from '../../component/ChatBody';
 import { ChatNav } from '../../component/ChatNav';
 import { ChatFooter } from '../../component/ChatFooter';
 import uuid from 'react-uuid';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { viewOneConversation } from '../../state';
+import { useSelector } from 'react-redux';
 
 
 export function ChatView() {
-  const location = useLocation()
-  const { user } = location.state
+  const {id} = useParams()
+  const dispatch = useDispatch()
+  const {chats} = useSelector((state) => state.conversation)
+
+ useEffect(() => {
+   dispatch(viewOneConversation(id))
+ }, [])
+ 
+  console.log('--------',chats);
 
 
-  
+
 
   const [chatList, setchatList] = React.useState([
       {
@@ -55,7 +65,7 @@ export function ChatView() {
 
   return (
     <div className=' w-2/4 bg-slate-100  flex-1 mx-auto flex flex-col'>
-      <ChatNav user ={user} title={"Chats"} />
+      <ChatNav user ={id} title={"Chats"} />
       <ChatBody chatList= {chatList} />
      <ChatFooter/>
 

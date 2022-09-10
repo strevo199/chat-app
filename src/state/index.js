@@ -1,2 +1,2 @@
-export *  from './chatsActionCareators'
+export *  from './actionCareators'
 export * from './store'

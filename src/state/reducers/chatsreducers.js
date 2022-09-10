@@ -2,10 +2,11 @@ import uuid from "react-uuid";
 
 const initialState = {
 
-    isLoading: true,
-    Conversations: [
+    isLoading: false,
+    chats: null,
+    conversations: [
         {
-            id: uuid(),
+            id: "c886ef08223",
             name: " Mark Benson",
             chatsList: [
                 {
@@ -45,8 +46,48 @@ const initialState = {
                 }]
         },
         {
-            id: uuid(),
+            id: "c886ef08223ttt",
             name: " Solomon Doe",
+            chatsList: [
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "me"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "client"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "client"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "me"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "client"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset  was popularised in the 1960s with the release of Letraset",
+                    sender: "client"
+                },
+                {
+                    id: uuid(),
+                    content: " It was popularised in the 1960s with the release of Letraset",
+                    sender: "me"
+                }]
+        },
+        {
+            id: "c886ef08223xxxttt",
+            name: " Tobby Doe",
             chatsList: [
                 {
                     id: uuid(),
@@ -92,18 +133,14 @@ const initialState = {
 
 export const chatsReducers = (state = initialState, action) => {
     switch (action.type) {
-        case "USERSLOADINGCHAT":
+
+        case "VIEWUSERCHAT":
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                chats: state.conversations.filter(item => item.id === action.payload)[0]
+        
             }
-        // case "VIEWUSERCHAT":
-        //
-        //     return {
-        //         ...state,
-        //         isLoading: true,
-        //
-        //     }
         default:
             return state;
     }
