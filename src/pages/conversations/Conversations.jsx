@@ -4,12 +4,14 @@ import { ChatNav } from '../../component/ChatNav';
 import { ChatFooter } from '../../component/ChatFooter';
 import uuid from 'react-uuid';
 import { receiveruser } from '../../assets/index';
-
+import { useDispatch } from 'react-redux';
 import './Conversations.style.css'
 import { Link } from 'react-router-dom';
+import {chatsActionCareators} from '../../state';
 
 
 export function Conversations() {
+
 
   const [Conversations, setConversations] = React.useState([
       {
@@ -52,7 +54,7 @@ export function Conversations() {
             Conversations.length ?
             (
               Conversations.map(conversation => (
-                <Link state={{user: conversation}} to={conversation.id} className='flex m-1 p-1 border-b-2 mb-1 bg-white'  key={conversation.id}>
+                <Link target="_blank" state={{user: conversation}} to={conversation.id} className='flex m-1 p-1 border-b-2 mb-1 bg-white'  key={conversation.id}>
                   <div className='mr-4'>
                     <img className=' w-11' src={receiveruser} alt="" />
                   </div>
