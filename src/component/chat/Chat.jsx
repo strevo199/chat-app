@@ -12,8 +12,8 @@ export function Chat({chat}) {
         chat.sender ==="me" 
         ? 
 
-        (<div className='flex  w-11/12 my-2 ml-6'>
-        <ChatBubble msg ={chat.content}/>
+        (<div className='flex justify-end w-11/12 my-2 ml-6'>
+        <ChatBubble msg ={chat}/>
         <div className=' relative w-1/4 flex justify-start  ml-2'>
             <img src={senderuser} className="chatImg" alt="" />
         </div>
@@ -23,7 +23,7 @@ export function Chat({chat}) {
         <div className='relative w-1/4 flex justify-end mr-2'>
             <img src={receiveruser} className="chatImg" alt="" />
         </div>
-        <ChatBubble msg ={chat.content}/>
+        <ChatBubble msg ={chat}/>
     </div>)
     }
     </>

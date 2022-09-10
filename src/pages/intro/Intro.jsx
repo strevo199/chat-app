@@ -26,7 +26,7 @@ export function Intro() {
 
 
   return (
-    <div className=' w-2/4  bg-slate-50 min-h-screen   mx-auto flex flex-col shadow-inner'>
+    <div className=' bg-slate-50 min-h-screen   mx-auto flex flex-col shadow-inner'>
           <div className=' my-10 px-2'>
             <div  className='text-6xl'>Hi</div>
           </div>

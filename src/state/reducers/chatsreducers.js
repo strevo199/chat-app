@@ -31,6 +31,36 @@ export const chatsReducers = (state = initialState, action) => {
                             content: " It was popularised in the 1960s with the release of Letraset",
                             sender: "client"
                         },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "me"
+                        },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "client"
+                        },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "me"
+                        },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "client"
+                        },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "me"
+                        },
+                        {
+                            id: uuid(),
+                            content: " It was popularised in the 1960s with the release of Letraset",
+                            sender: "client"
+                        },
                         
                         {
                             id: uuid(),

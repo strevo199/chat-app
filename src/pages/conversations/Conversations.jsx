@@ -17,7 +17,7 @@ export function Conversations() {
 
 
   return (
-    <div className=' w-2/4 shadow-inner bg-slate-50  flex-1 mx-auto flex flex-col'>
+    <div className='shadow-inner bg-slate-50  flex-1 mx-auto flex flex-col'>
       <ChatNav title ={'Conservations'} user={user} />
       <div className='Conversations'>
           {
