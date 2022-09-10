@@ -57,6 +57,7 @@ export const chatsReducers = (state = initialState, action) => {
     switch (action.type) {
 
         case "VIEWUSERCHAT":
+
             return {
                 ...state,
                 isLoading: false,
