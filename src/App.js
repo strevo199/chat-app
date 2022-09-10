@@ -1,8 +1,9 @@
 import React from 'react';
+import { ChatView } from './pages/chat-view';
 
 function App(props) {
     return (
-        <div>lalal</div>
+        <ChatView/>
     );
 }
 
